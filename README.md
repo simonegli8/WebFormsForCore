@@ -1,3 +1,7 @@
+# New Repository Location
+This prohject has moved to [https://github.com/webformsforcore/WebFormsForCore](https://github.com/webformsforcore/WebFormsForCore).
+The old repository here has been archived.
+
 # WebFormsForCore
 A library to run WebForms apps on ASP.NET Core. This library provides a port
 of the System.Web libraries of .NET Framework to .NET 8. With this library,
