@@ -1,5 +1,5 @@
 # New Repository Location
-This prohject has moved to [https://github.com/webformsforcore/WebFormsForCore](https://github.com/webformsforcore/WebFormsForCore).
+This project has moved to [https://github.com/webformsforcore/WebFormsForCore](https://github.com/webformsforcore/WebFormsForCore).
 The old repository here has been archived.
 
 # WebFormsForCore
