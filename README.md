@@ -155,8 +155,7 @@ var app = builder.Build();
 
 app.UseSession();
 
-app.UseAspNetCoreSessionProvider();
-app.UseWebForms();
+app.UseWebForms(opt => opt.UseAspNetCoreSessionProvider());
 
 app.Run();
 ```

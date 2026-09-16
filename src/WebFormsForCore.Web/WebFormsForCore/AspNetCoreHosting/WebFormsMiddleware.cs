@@ -146,6 +146,23 @@ namespace Microsoft.AspNetCore.Builder
 
         public WebFormsOptions UseClassicMode() { Instance.UseClassicMode = true; return this; }
         public WebFormsOptions UseIntegratedMode() { Instance.UseClassicMode = false; return this; }
+        public WebFormsOptions UseAspNetCoreSessionProvider()
+        {
+            // Equivalent to a web.config entry of:
+            // <sessionState mode="Custom" customProvider="AspNetCoreSession">
+            //     <providers>
+            //         <add name="AspNetCoreSession" type="System.Web.SessionState.AspNetCoreSessionProvider, System.Web" />
+            //     </providers>
+            // </sessionState>
+            SessionStateModule.ProviderOverride = () =>
+            {
+                var provider = new AspNetCoreSessionProvider();
+                provider.Initialize("AspNetCoreSession", new NameValueCollection());
+                return provider;
+            };
+
+            return this;
+        }
     }
 
     public static class WebFormsMiddlewareExtensions
