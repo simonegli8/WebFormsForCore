@@ -159,6 +159,8 @@ app.UseWebForms(opt => opt.UseAspNetCoreSessionProvider());
 
 app.Run();
 ```
+This will store the session state in process. You can also use different ASP.NET Core session providers, like Redis, to have
+a session state server.
 
 ## Conflicts with Existing Packages
 Currently there might be some conflicts with the packages System.Web.dll, System.Drawing.dll &
