@@ -21,8 +21,9 @@ namespace WebFormsForCore.Test
 
 			app.UseSession();
 
-			app.UseAspNetCoreSessionProvider();
-			app.UseWebForms(options => options.HandleAllRequestsWithWebForms());
+			app.UseWebForms(options => options
+				.HandleAllRequestsWithWebForms()
+				.UseAspNetCoreSessionProvider());
 
 			app.Run();
 
